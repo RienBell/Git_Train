@@ -1,0 +1,16 @@
+。 【master】 主分支
+	。 【develop】 開發分支：
+		從【master】分離出來的。但是在開發的時候，不是在這個分支上直接做。
+		會新增一個分支叫【feature/xxx1】、【feature/xxx2】...
+			。feature/xxx 分支
+		這些分支完成後會合併到【develop】上，然後刪除【feature/xxx】分支
+		最後在讓【master】【develop】合併
+		合併完成後，通常是不會刪除【develop】分支
+	。 【hotfix/xxx】 Debug分支：
+		一般做為上線後的程式bug修復使用，修復完成後合併到【master】、【develop】
+		***因為【master】分支跟【develop】分支已經分開
+		***如果只有合併到【master】，【develop】沒有合併到
+		***之後要把【master】跟【develop】合併的話，就會出問題
+	。 其他分支：
+		。 【test】測試分支
+		。 【pre】預上線分支

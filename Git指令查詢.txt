@@ -1,0 +1,25 @@
+新增Git存放庫		【git init】
+
+查看當前狀態		【git status】
+
+檔案加入存放庫(預備)	【git add .】
+
+放入Git存放庫，稱為"存檔"	【git commit -m '註解'】
+
+查看存檔內容		【git log】
+
+切換版本			【git reset --hard [commit ID]】
+查看所有操作的內容	【git reflog】
+
+查看分支有哪些		【git branch】
+
+創建分支			【git branch [分支名稱]】
+*創建並切換分支，較為常用	【git checkout -b [分支名稱]】
+
+切換分支			【git checkout [分支名稱]】
+
+刪除分支			【git branch -d [分支名稱]】
+
+合併分支			【git merge [分支名稱]】
+
+

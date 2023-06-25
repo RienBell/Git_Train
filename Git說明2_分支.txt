@@ -9,9 +9,11 @@
 	。git checkout [分支名稱]
 	。git checkout -b [分支名稱]  //新增並且切換
 
-*合併分支：通常我們是把分支合併到master上面不是其他的
+*合併分支：首先要切換到目標分支上，像是「要把 feature/xxx1 合併到 develop 上，要先切換到develop」
+	通常我們是把分支合併到master上面不是其他的
 	先切換到master分支【git checkout master】
 	【git merge [分支名稱]】
+	
 
 刪除分支：
 	。git branch -d [分支名稱]
