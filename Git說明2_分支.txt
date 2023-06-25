@@ -1,0 +1,35 @@
+查看有哪些分支：
+	。git branch
+
+創建新分支：
+	。git branch [分支名稱]//默認會在當前的存檔上
+	。git checkout -b [分支名稱]  //創建並且切換
+
+*切換分支：
+	。git checkout [分支名稱]
+	。git checkout -b [分支名稱]  //新增並且切換
+
+*合併分支：通常我們是把分支合併到master上面不是其他的
+	先切換到master分支【git checkout master】
+	【git merge [分支名稱]】
+
+刪除分支：
+	。git branch -d [分支名稱]
+
+分支衝突：
+	會出現：
+	{
+		小於的後面【HEAD】代表當前分支，下放是衝突內容
+		【=】下面是衝突的分支與其內容
+		<<<< HEAD
+		count=3
+		=======
+		count=2
+		>>>> dev01
+	}
+	{
+		可以寫成下面這樣 全部刪掉 寫一個新的
+		count=5
+	}
+	這時候在打【git add .】、【git commit -m 'xxx'】
+	就合併成功了
