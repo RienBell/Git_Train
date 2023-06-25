@@ -1,0 +1,21 @@
+安裝完成後，需要輸入使用者名稱與Email：
+	。git config --global user.name "名稱"
+	。git config --global user.mail "自己的Email"
+
+創建初始的git倉庫
+	。git init
+
+如果【新增】、【修改完成後】文件需要加入追蹤(加入git存放庫)
+	。git add . // 【.】代表全部的意思
+	。git add 文件名稱
+
+當然如果想要在add之前看看狀態：
+	。git status
+	看到紅色代表沒有追蹤/修改完成但還沒add
+	綠色代表有追蹤
+
+暫存(存檔)
+	。git commit -m "註解：這個存檔修改了甚麼或是在做甚麼"
+
+暫存完成後可以看 有儲存哪些存檔：
+	。git log
