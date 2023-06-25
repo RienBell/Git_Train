@@ -1,0 +1,8 @@
+在使用者的資料夾上創建名為【.bashrc】的檔案
+C:\Users\user
+
+也可以用"命令提示字元輸入"或"Git Bash Here"輸入：【touch ~/.bashrc】
+【
+	alias git-log='git log --pretty=oneline --all --graph --abbrev-commit'
+	alias ll='ls -al'
+】

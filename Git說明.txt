@@ -18,4 +18,21 @@
 	。git commit -m "註解：這個存檔修改了甚麼或是在做甚麼"
 
 暫存完成後可以看 有儲存哪些存檔：
-	。git log
+	。git log [options]
+		1.【--all】顯示所有分支
+		2.【--pretty=oneline】將提交訊息顯示為一行
+		3.【--abbrev-commit】使輸出的commitId更簡短
+		4.【--graph】以圖的形式顯示
+	舉例：
+		【git log --pretty=oneline --abbrev-commit --all --graph --decorate】
+		上面的指令太長可以用別名
+
+版本回朔：
+	。git reset --hard [commit ID，這裡是ID不是名稱]
+	舉例：
+		有兩個存檔【a123456】、【a234567】，目前在a2...7，要退到a1...6
+		--> $ git reset --hard a123456
+		如果這時候用【git log】會發現，
+
+
+
