@@ -1,0 +1,6 @@
+連接遠端Git存放庫		【git remote add [遠端名稱] [遠程存放庫位置SSH]】
+確認綁定			【git remote -v】【git remote】
+推送到存放庫		【git push [遠端名稱] [分支名稱]:[分支名稱]】git push origin master
+看本地與遠端的分支對應	【git branch -vv】
+
+

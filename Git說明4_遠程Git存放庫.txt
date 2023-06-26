@@ -1,0 +1,68 @@
+在github上新建一個新的Repository後
+任何人都可以推上去嗎？當然不是
+有兩種限制方法
+	1. 輸入帳號密碼
+	2. 公私鑰
+
+生成公私鑰(SSH)：只要不斷Enter就好，如果公鑰已存在，會自動覆蓋
+	【ssh-keygen -t rsa】為非對稱密鑰
+	生成完後 查看公鑰
+	【cat ~/.ssh/id_rsa.pub】
+		【cat】是查看檔案
+		【~/】是當前使用者的根目錄，預設在【C:\Users\user】
+	整個複製後 貼到GitHub上的設定裡面【SSH and GPG keys】
+	找到標題為【SSH keys】右邊按鈕新增密鑰 貼上即可
+
+確認有沒有成功：
+	【ssh -T [網址]】
+
+綁定遠程git存放庫：
+	【git remote add [遠端名稱] [遠程存放庫位置SSH]】名稱我們莫認為origin
+	確認有沒有綁定：
+	【git remote】
+	【git remote -v】
+
+推到存放庫：
+	【git push [遠端名稱] [分支名稱]】git push origin master
+	【git push [-f] [--set-upstream] [遠端名稱] [本地分支]:[遠端分支]】
+		寫成這樣：git push -f --set-upstream origin master:master
+		-f 是強制覆蓋，不管遠端是甚麼內容，都以本地為準。但是通常不會用到
+		master:master 你要告訴他：你推上去的分支要跟遠端的哪一個分支對應
+			如果都一樣默認只要寫一個就好
+		--set-upstream 推送到遠端的同時 建立和遠端分支的關聯
+		關聯建立完成後就可以直接【git push】就好
+		當然寫全名也是可以的，因為比較明確
+
+	【git branch -vv】可以看到遠端與本地的分支對應名稱
+
+從遠端存放庫clone下來：
+	【git clone [SSH: github存放庫位置] [檔案名稱]】
+		檔案名稱：是指下載的資料夾名稱是甚麼，可以省略
+
+存遠端存放庫拉資料：
+	【git fetch [遠端名稱: origin] [分支名稱: master]】
+		把遠端的抓到本地，但不會進行合併
+		*遠端分支也是分支，需要進行合併(如果不是用pull)
+			【git merge [遠端名稱/分支名稱: origin/master]】
+	【git pull [遠端名稱: origin] [分支名稱: master]】
+		把遠端的抓到本地，會自動進行合併
+		等於是上面的fetch+mergef
+	如果沒有指定[遠端名稱]與[分支名稱]，會抓取全部分支
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
